@@ -1,0 +1,35 @@
+AI SECURITY LAB - UPDATED PROJECT
+
+IMPORTANT CREDENTIAL NOTICE
+The ZIP originally uploaded contained a non-empty Gemini API key in .env and in
+both env example files. Revoke that key in Google AI Studio. Do not reuse it.
+This updated package contains no .env file and no API key. After extracting,
+create your local .env by copying .env.example, then add only a newly generated
+key locally. Never upload or commit .env.
+
+INSTALL / UPDATE ON WINDOWS
+1. Close the running Streamlit app (Ctrl+C in its terminal).
+2. Make a backup copy of your existing ai-security-lab folder.
+3. Extract this ZIP. It contains the updated ai-security-lab project folder.
+4. Copy the contents of the updated ai-security-lab folder over your existing
+   project folder. Allow replacement of matching source files.
+5. Do NOT replace your local .env file. If you already rotated the exposed key,
+   keep the new key only in your local .env.
+6. Open VS Code terminal in the project folder and activate your environment:
+      .\venv\Scripts\Activate.ps1
+7. Run:
+      pip install -r requirements.txt
+      pytest -q
+      streamlit run main.py
+
+EXPECTED TEST RESULT
+The bundled tests were run during preparation: 16 passed.
+If your local test result differs, send the complete terminal output.
+
+SECURITY SCOPE
+This revision adds local defense-in-depth controls, not a production-grade
+security product. The demo has no real login, tenant database, persistent
+memory, real email, outbound HTTP, or code-execution sandbox. Its fixed demo
+identity is only for illustrating server-side authorization. Live model
+responses still require manual review; marker-based results are not semantic
+proof of safety. See docs/implementation_status.md.

@@ -1,0 +1,7 @@
+streamlit>=1.40
+anthropic>=0.40
+google-genai>=1.0
+python-dotenv>=1.0
+pandas>=2.2
+pytest>=8.0
+mcp>=1.0
